@@ -35,6 +35,7 @@ const config: Configuration = {
   },
   devServer: {
     static: path.join(__dirname, "build"),
+    historyApiFallback: true,
     compress: true,
     port: 4000,
   },
