@@ -1,5 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import path from "path";
 import { Configuration } from "webpack";
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+dotenv.config({ path: './.env' })
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 const config: Configuration = {
   entry: "./src/index.tsx",
@@ -40,6 +44,9 @@ const config: Configuration = {
       eslint: {
         files: "./src/**/*",
       },
+    }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
     }),
   ],
 };
