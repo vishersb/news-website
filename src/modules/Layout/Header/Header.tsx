@@ -16,10 +16,16 @@ const Header = ({classes}:Props)=>{
                 <CustomLink to="/pc">PC</CustomLink>
             </li>
             <li className={classes.listItem}>
-                <CustomLink to="/it">IT</CustomLink>
+                <CustomLink to="/laptops">Laptops</CustomLink>
             </li>
             <li className={classes.listItem}>
-                <CustomLink to="/news">NEWS</CustomLink>
+                <CustomLink to="/news">News</CustomLink>
+            </li>
+            <li className={classes.listItem}>
+                <CustomLink to="/tech">Tech</CustomLink>
+            </li>
+            <li className={classes.listItem}>
+                <CustomLink to="/films">Films</CustomLink>
             </li>
         </ul>
     </div>
